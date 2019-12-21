@@ -1,5 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: deeppink;
+  color: #212121;
+}
+.container {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  padding: 24px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+  border-radius: 24px;
+}
+
+#post h1 {
+  padding-bottom: 20px;
+  padding-top: 8px;
+  font-size: 28px;
+  text-align: center;
 }
