@@ -151,6 +151,16 @@ Lo primero que hay que entender es la diferencia de estructura de archivos entre
 
 ## Comandos básicos de git
 
+### Notas
+
+#### -
+
+Se usa un solo guión cuando vas a usar solo las letras (atajos) -m
+
+#### --
+
+Usar el doble guion significa que vas a usar una palabra como --global
+
 ### git init
 
 Suceden 2 cosas
@@ -168,7 +178,11 @@ Antes de ejecutar el comando los archivos no son rastreados (untracked) y no est
 
 Elimina todos los archivos que se esten rastreando en el staging
 
-### git commit -m "MENSAJE"
+### git status
+
+Para saber que archivos estan el staging
+
+### git commit
 
 Todos los archivos modificados y que vivian en staging pasan al repositorio por defecto llamado master.
 
@@ -176,6 +190,13 @@ Los números raros que salen en cada commit son el id en la base de datos.
 
 Cada commit enviado al repositorio es una nueva version de cambios de tu proyecto v1, v2, v3... vn.
 
+### git commit -m "MENSAJE"
+
+Para poder agregarle un mensaje a tu commit (es lo más recomendable)
+
+### git log
+
+Para ver todo el historial de commits
 
 ### git checkout <NAME>
 
@@ -235,3 +256,27 @@ Master                 v-final   ->   v-final-final
 Development          v3
 
 Pero juntar 2 ramas puede romper con el código y a esto se le llama conflicto.
+
+### git config
+
+Te mostrara una lista de como usarlo
+
+#### git config --lsit
+
+Te mostrara la configuración de tu git
+
+#### git config --lsit --show-origin
+
+Podras ver donde estan guardadas las configuraciones de windows
+
+#### git config --global
+
+Para cambiar la configuración global de git
+
+##### git config --global user.name "<NAME>"
+
+Para cambiar el usuario de la configuración global
+
+##### git config --global user.email "<EMAIL>"
+
+Para cambiar el email de la configuración global
