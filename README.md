@@ -161,6 +161,10 @@ Se usa un solo guión cuando vas a usar solo las letras (atajos) -m
 
 Usar el doble guion significa que vas a usar una palabra como --global
 
+#### <ESC> + :wq
+
+Para salir de lugares raros :v
+
 ### git init
 
 Suceden 2 cosas
@@ -197,6 +201,10 @@ Para poder agregarle un mensaje a tu commit (es lo más recomendable)
 ### git log
 
 Para ver todo el historial de commits
+
+#### :q
+
+Para salir del log
 
 ### git checkout
 
