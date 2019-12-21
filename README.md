@@ -198,13 +198,21 @@ Para poder agregarle un mensaje a tu commit (es lo más recomendable)
 
 Para ver todo el historial de commits
 
-### git checkout <NAME>
+### git checkout
 
-Puedes traer las distinas versiones (xommita) hacia tu carpeta.
+#### git checkout <COMMIT_ID>
 
-Tambien te permite moverte entre distintas ramas.
+Puedes traer las distinas versiones (commits) hacia tu carpeta.
 
-### git branch <NAME>
+#### git checkout <BRANCH_NAME>
+
+Te permite moverte entre distintas ramas.
+
+### git branch
+
+Te muestra las ramas existentes
+
+#### git branch <NAME>
 
 Te permite crear una rama
 
@@ -280,3 +288,11 @@ Para cambiar el usuario de la configuración global
 ##### git config --global user.email "<EMAIL>"
 
 Para cambiar el email de la configuración global
+
+### git show
+
+Te muestra todos los cambios de tu proyecto
+
+#### git show <FILE_NAME>
+
+Te muestra todos los cambios de un archivo
