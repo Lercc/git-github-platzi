@@ -310,3 +310,13 @@ Te muestra todos los cambios de un archivo entre el commit actual y el anterior
 ### git diff <COMMIT_ID> <COMMIT_ID>
 
 Te muestra todos los cambios entre los distintos commit
+
+### git reset 
+
+#### git reset --hard
+
+Para volver en el tiempo borrando absolutamente todo lo que este por adelante del punto al cual deseamos volver
+
+#### git reset --soft
+
+Similiar a --hard pero mantenemos lo que este en staging
