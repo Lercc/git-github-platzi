@@ -189,19 +189,24 @@ Por defecto tu estas en una rama master con sus distintas versines (commits)
 
 Master      v1   ->   v2   ->   v3   ->   v-actual
 
-Pero ahora decidimos hacer algunos experimentos pero no queremos tocar el código actual asi que creamos una rama llamada Experimentos teniendo como base la v3 del proyecto.
+Pero ahora decidimos hacer algunos experimentos pero no queremos tocar el código actual asi que creamos una rama llamada Development teniendo como base la v3 del proyecto.
 
 Master      v1   ->   v2   ->   v3   ->   v-actual
-                                          ↓
-Experimentos                    v1   ->  v2   ->   v3
 
-La rama experimentos se convirtio en algo completamente distinto a la de master
+↓ (v3 of Mater to v1 of Development)
+
+Development                     v1(v3)   ->  v2   ->   v3
+
+La rama Development se convirtio en algo completamente distinto a la de master
 
 Ahora digamos que estabas cambiando cosas y salio un bug en la versión actual por lo cual creas una rama especial partiendo de la versión actual de la rama master.
 
 Master      v-actual
-                    ↓
-HotFix         v1         ->       v2
+
+↓ (v-actual of Mater to v1 of HotFix)
+
+
+HotFix         v1(v-actual)         ->       v2
 
 Ahora que ya solucionaste el bug en otra rama es momento de llevar esos cambios a la version actual en la rama master
 
@@ -212,7 +217,17 @@ Te permite unir 2 ramas
 Ahora que ya tienes la versin de HotFix en Master se creo una nueva version que llamaremos version final
 
 Master      v-actual         v-final
-                    ↓                     ↑
+
+↓ (v-actual of Master to v1 of HotFix) - ↑ (v2 of HotFix to Master in v-final)
+
 HotFix         v1         ->       v2
 
-Pero ahora ya terminaste tus experimentos y quieres unirlos a la rama
+Pero ahora ya terminaste tus experimentos y quieres unirlos a la version final en la rama master
+
+Master                 v-final   ->   v-final-final
+
+↑ (v3 of Development to Master in v-final-final)
+
+Development          v3
+
+Pero juntar 2 ramas puede romper con el código y a esto se le llama conflicto.
