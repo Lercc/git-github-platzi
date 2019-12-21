@@ -158,11 +158,15 @@ Suceden 2 cosas
 * Se crea un area en memoria ram que se llama staging donde se iran agregando los cambios.
 * Se crea el repositorio ( la carpeta .git) y es donde  van a estar todos los cambios al final de tu proyecto.
 
-### git add
+### git add <FILE_NAME>
 
 Una vez haces cambios en tus archivos se agregan al staging area usando el comando git add . todos los archivos modificados pasan a vivir en staging donde esperan a que se envie al repositorio.
 
 Antes de ejecutar el comando los archivos no son rastreados (untracked) y no estan el staging y una vez se ejecute el comando estos pasan a ser rastreados (tracked) y pasan a estar en staging
+
+### git reset HEAD <FILE_NAME>
+
+Elimina todos los archivos que se esten rastreando en el staging
 
 ### git commit -m "MENSAJE"
 
@@ -173,13 +177,13 @@ Los números raros que salen en cada commit son el id en la base de datos.
 Cada commit enviado al repositorio es una nueva version de cambios de tu proyecto v1, v2, v3... vn.
 
 
-### git checkout
+### git checkout <NAME>
 
 Puedes traer las distinas versiones (xommita) hacia tu carpeta.
 
 Tambien te permite moverte entre distintas ramas.
 
-### git branch
+### git branch <NAME>
 
 Te permite crear una rama
 
@@ -210,7 +214,7 @@ HotFix         v1(v-actual)         ->       v2
 
 Ahora que ya solucionaste el bug en otra rama es momento de llevar esos cambios a la version actual en la rama master
 
-### git merge
+### git merge <BRANCH>
 
 Te permite unir 2 ramas
 
