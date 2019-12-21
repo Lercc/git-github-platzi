@@ -194,6 +194,8 @@ Los números raros que salen en cada commit son el id en la base de datos.
 
 Cada commit enviado al repositorio es una nueva version de cambios de tu proyecto v1, v2, v3... vn.
 
+Al usarlo se nos abrira una pantalla rara que es un editor de codigo dentreo del mundo de git llamado vim
+
 ### git commit -m "MENSAJE"
 
 Para poder agregarle un mensaje a tu commit (es lo más recomendable)
@@ -299,8 +301,12 @@ Para cambiar el email de la configuración global
 
 ### git show
 
-Te muestra todos los cambios de tu proyecto
+Te muestra todos los cambios de tu proyecto entre el commit actual y el anterior
 
 #### git show <FILE_NAME>
 
-Te muestra todos los cambios de un archivo
+Te muestra todos los cambios de un archivo entre el commit actual y el anterior
+
+### git diff <COMMIT_ID> <COMMIT_ID>
+
+Te muestra todos los cambios entre los distintos commit
