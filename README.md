@@ -1,6 +1,6 @@
 # Git - Platzi
 
-## Introducción
+## 1. Introducción
 
 ### ¿Qué es Git?
 Es un control de versiones que guarda los cambios de archivos.
@@ -35,7 +35,7 @@ Usas GitHub
 
 ![git](./md/git-7.jpg)
 
-###  ¿Porqué usar Git?
+### ¿Porqué usar Git?
 Usamos Git solo para cambiar los cambios realizados en un archivo.
 
 * Donde ocurrieron
@@ -151,7 +151,7 @@ Lo primero que hay que entender es la diferencia de estructura de archivos entre
 * COMANDO --help
   * ver la lista de parametros para cada comando
 
-## Comandos básicos de git
+## 2. Comandos básicos de git
 
 ### Notas
 
@@ -385,7 +385,7 @@ Funciona similiar a git reset HEAD
 
 Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
 
-## Flujo de trabajo básico
+## 3. Flujo de trabajo básico
 
 Antes que nada se necesita un repositorio remoto puede ser github, gitlab, bitbucket el que quieras
 
@@ -400,6 +400,10 @@ Se trae lor archivos a dos lugares, una copia del master a tu directorio local y
 Envio todos mis commits de mi repositorio local al servdior remoto
 
 ![git](./md/git-18.jpg)
+
+#### git push <REMOTE | origin por lo general> <BRANCH_NAME | master por lo general>
+
+Comando pra enviar al repositorio remoto los commits de mi rama especifica
 
 ### git fetch
 
@@ -418,6 +422,16 @@ Para que se copie en nuestro directorio de trabajo local tengo que fucionar los 
 Ejecuta fetch y merger a la vez para traer los ultimos cambios en el repositorio remoto y combinarlos con nuestro repositorio global y directorio global en un solo paso
 
 ![git](./md/git-21.jpg)
+
+#### git pull <REMOTE | origin por lo general> <BRANCH_NAME | master por lo general>
+
+Para poder subitr los commits al repositorio remoto
+
+#### git pull <REMOTE | origin por lo general> <BRANCH_NAME | master por lo general> --allow-unrelated-histories
+
+Para poder subitr los commits al repositorio remoto de manera forzada
+
+## 4. Trabajando con repositorios remotos
 
 ### git remote 
 
