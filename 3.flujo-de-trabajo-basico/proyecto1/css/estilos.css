@@ -28,7 +28,7 @@ body {
   display: inline-block;
   font-weight: normal;
   font-size: .8em;
-  transform: translateX(16px);
+  transform: translateX(8px);
 }
 .post {
   padding: 24px;
