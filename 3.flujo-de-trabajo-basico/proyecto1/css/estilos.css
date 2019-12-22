@@ -15,11 +15,27 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 32px;
-  padding: 24px;
   box-shadow: 0 0 16px rgba(0, 0, 0, .1);
   border-radius: 24px;
+  overflow: hidden;
 }
-
+.header {
+  margin: 0;
+  padding: .5em;
+  font-weight: bold;
+  background-color: #33a;
+  color: #fff;
+  font-size: 1.6em;
+}
+.header .tagline {
+  display: inline-block;
+  font-weight: normal;
+  font-size: .8em;
+  transform: translateX(8px);
+}
+.post {
+  padding: 24px;
+}
 .post h1 {
   padding-bottom: 20px;
   padding-top: 8px;
