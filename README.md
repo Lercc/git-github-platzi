@@ -146,6 +146,7 @@ Lo primero que hay que entender es la diferencia de estructura de archivos entre
   * para ejecutar ese comando
 * rm (remove)
   * remover archivos
+  * rm -r -> para borrar directorios 
 * COMANDO --help
   * ver la lista de parametros para cada comando
 
@@ -178,10 +179,6 @@ Una vez haces cambios en tus archivos se agregan al staging area usando el coman
 
 Antes de ejecutar el comando los archivos no son rastreados (untracked) y no estan el staging y una vez se ejecute el comando estos pasan a ser rastreados (tracked) y pasan a estar en staging
 
-### git reset HEAD <FILE_NAME>
-
-Elimina todos los archivos que se esten rastreando en el staging
-
 ### git status
 
 Para saber que archivos estan el staging
@@ -200,9 +197,21 @@ Al usarlo se nos abrira una pantalla rara que es un editor de codigo dentreo del
 
 Para poder agregarle un mensaje a tu commit (es lo más recomendable)
 
+### git commit -a
+
+esto atuomaticamente hace el git add de los cambios __Solo funciona con archivos que ya estabam el staging previamente__ si creo un archivo nuevo esto no va a funcionar.
+
+### git commit -am "MENSAJE"
+
+juntamos los 2 comandos anteriores
+
 ### git log
 
 Para ver todo el historial de commits
+
+#### git log --stat
+
+vamos a poder ver los cambios especificos de los archivos en cada cmommit 
 
 #### :q
 
@@ -210,13 +219,25 @@ Para salir del log
 
 ### git checkout
 
+#### git checkout -- <FILE_NAME>
+
+Para eliminar los cambios que no se han subido la staging
+
 #### git checkout <COMMIT_ID>
 
 Puedes traer las distinas versiones (commits) hacia tu carpeta.
 
+#### git checkout <COMMIT_ID> <FILE_NAME>
+
+Puedes traer las distinas versiones (commits) hacia tu carpeta pero solo de el archivo especifico.
+
 #### git checkout <BRANCH_NAME>
 
 Te permite moverte entre distintas ramas.
+
+#### git checkout -b <BRANCH_NAME>
+
+Te ptermite crear y moverte a la rama nueva.
 
 ### git branch
 
@@ -225,6 +246,14 @@ Te muestra las ramas existentes
 #### git branch <NAME>
 
 Te permite crear una rama
+
+#### git branch -d <NAME>
+
+Te perimte eliminar una rama, pero solo si esta no contiene trabajos sin fucionar
+
+#### git branch -D <NAME>
+
+te permite forzar la eliminacion de la rama
 
 #### Ramas
 
@@ -307,7 +336,11 @@ Te muestra todos los cambios de tu proyecto entre el commit actual y el anterior
 
 Te muestra todos los cambios de un archivo entre el commit actual y el anterior
 
-### git diff <COMMIT_ID> <COMMIT_ID>
+### git diff
+
+Te muestra los cambios entre tus archivos locales y lo que este en staging
+
+#### git diff <COMMIT_ID> <COMMIT_ID>
 
 Te muestra todos los cambios entre los distintos commit
 
@@ -320,3 +353,56 @@ Para volver en el tiempo borrando absolutamente todo lo que este por adelante de
 #### git reset --soft
 
 Similiar a --hard pero mantenemos lo que este en staging
+
+#### git reset HEAD <FILE_NAME>
+
+Elimina todos los archivos que se esten rastreando en el staging
+
+### git rm
+
+No se puede usar sin más tiene que tener un flag
+
+#### git rm --cached <FILE_NAME>
+
+Elimina los archivos del área de Staging y del próximo commit pero los mantiene en nuestro disco duro.
+
+Funciona similiar a git reset HEAD
+
+#### git rm --force <FILE_NAME>
+
+Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+
+## Flujo de trabajo básico
+
+Antes que nada se necesita un repositorio remoto puede ser github, gitlab, bitbucket el que quieras
+
+### git clone <URL>
+
+Se trae lor archivos a dos lugares, una copia del master a tu directorio local y crea la base de datos de todos los cambios historicos en el repositorio local y deja staging limpio.
+
+![git](./md/git-17.jpg)
+
+### git push
+
+Envio todos mis commits de mi repositorio local al servdior remoto
+
+![git](./md/git-18.jpg)
+
+### git fetch
+
+Te trae los nuevos commits del repositorio remoto al repositorio local pero NO los trae a nuestro directorio de trabajo local
+
+![git](./md/git-19.jpg)
+
+### git merge
+
+Para que se copie en nuestro directorio de trabajo local tengo que fucionar los ultima version que esta en el repositorio local con mi version actual (la de mi directorio de trabajo local)
+
+![git](./md/git-20.jpg)
+
+### git pull
+
+Ejecuta fetch y merger a la vez para traer los ultimos cambios en el repositorio remoto y combinarlos con nuestro repositorio global y directorio global en un solo paso
+
+![git](./md/git-21.jpg)
+
