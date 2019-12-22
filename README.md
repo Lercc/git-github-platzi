@@ -123,6 +123,7 @@ Lo primero que hay que entender es la diferencia de estructura de archivos entre
   * cd ../ para salir del directorio 
   * cd / -> para ir a la raiz de mi disco
   * cd -> para ir a mi usuario 
+  * echo cd RUTA >> ~.bashrc
 * ls
   * mostros todos los archivos del directorio
   * ls -l -> mostrar todos los archivos y que me los muestre en una lista
@@ -251,9 +252,21 @@ Te permite crear una rama
 
 Te perimte eliminar una rama, pero solo si esta no contiene trabajos sin fucionar
 
+Si se esta trabajando con un repositorio remoto entonces se tiene que hacer un push
+
+```
+git push -u origin <BRANCH_NAME>
+```
+
 #### git branch -D <NAME>
 
 te permite forzar la eliminacion de la rama
+
+Si se esta trabajando con un repositorio remoto entonces se tiene que hacer un push
+
+```
+git push -u origin <BRANCH_NAME>
+```
 
 #### Ramas
 
@@ -405,4 +418,22 @@ Para que se copie en nuestro directorio de trabajo local tengo que fucionar los 
 Ejecuta fetch y merger a la vez para traer los ultimos cambios en el repositorio remoto y combinarlos con nuestro repositorio global y directorio global en un solo paso
 
 ![git](./md/git-21.jpg)
+
+### git remote 
+
+Nos muestra los remotes existentes
+
+#### git remote add origin <URL>
+
+Para poder agregar la url del repositorio remoto de donde nos traeremos los cambios y hacia donde enviaremos nuestros cambios
+
+#### git remote -v
+
+Nos muestra vervalmente los remotes existentes
+
+#### git remote rm <REMOTE_NAME>
+
+Nos permite eliminar un remote
+
+
 
