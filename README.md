@@ -421,11 +421,15 @@ Master      v1      →     v2      →     v3    →     v-actual
 Pero ahora decidimos hacer algunos experimentos pero no queremos tocar el código actual asi que creamos una rama llamada Development teniendo como base la v3 del proyecto.
 
 ```
-Master      v1      ->      v2      ->      v3      ->      v-actual
-                                                      ↓ 
-Development                                  v1     ->      v2      ->      v3
-```
+Master      v1      →      v2      →      v3      →      v-actual
 
+                                          ↓ 
+
+Development                               v1     →      v2      →      v3
+```
+sdasdasdasd
+asdasdasd
+adsadasd
 La rama Development se convirtio en algo completamente distinto a la de master
 
 Ahora digamos que estabas cambiando cosas y salio un bug en la versión actual por lo cual creas una rama especial partiendo de la versión actual de la rama master.
