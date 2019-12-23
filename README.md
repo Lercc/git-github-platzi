@@ -5,11 +5,10 @@
   <h5 style="font-weight:bold;" >Git & GitHub by aomine</h5>
 </div>
 
-## INDEX
+## Index
 
 - [Introducción](#introducción)
   - [¿Qué es Git?](#qué-es-git)
-  - [¿Qué es la autenticación y la autorización?](#qué-es-la-autenticación-y-la-autorización)
   - [¿Porqué usar Git?](#porqué-usar-git)
   - [Instalar Git en Windows](#instalar-git-en-windows)
   - [Archivos binarios y de texto plano](#archivos-binarios-y-de-texto-plano)
@@ -23,6 +22,7 @@
   - [git log](#git-log)
   - [git checkout](#git-checkout)
   - [git branch](#git-branch)
+  - [Ramas](#ramas)
   - [git merge](#git-merge)
   - [git config](#git-config)
   - [git show](#git-show)
@@ -44,32 +44,43 @@
 
 ## Introducción
 
-### ¿Qué es la autenticación y la autorización?
-
 ### ¿Qué es Git?
 
 Es un control de versiones que guarda los cambios de archivos.
 
-![git](./md/git-1.jpg)
+<div align="center">
+  <img src="./md/git-1.jpg" alt="img">
+</div>
 
 Ademas manejas los cambios que otras personas hagan sobre los mismos archivos, así multiples personas pueden trabajar en un mismo proyecto sin pisarse.
 
-![git](./md/git-2.jpg)
+<div align="center">
+  <img src="./md/git-2.jpg" alt="img">
+</div>
 
 Si existe algun error se peude saber quien hizo ese cambio.
 
-![git](./md/git-3.jpg)
+<div align="center">
+  <img src="./md/git-3.jpg" alt="img">
+</div>
 
 si hay algo de una versión antigua que quieres recuperar  lo puedes hacer de manera precisa.
 
-![git](./md/git-4.jpg)
+<div align="center">
+  <img src="./md/git-4.jpg" alt="img">
+</div>
 
 En tu maquina local usas git funciona en la terminal o linea de comandos.
-![git](./md/git-5.jpg)
+
+<div align="center">
+  <img src="./md/git-5.jpg" alt="img">
+</div>
 
 Y tiene distintos comandos.
 
-![git](./md/git-6.jpg)
+<div align="center">
+  <img src="./md/git-6.jpg" alt="img">
+</div>
 
 #### Si quieres
 * Colaborar con otros
@@ -78,7 +89,13 @@ Y tiene distintos comandos.
 
 Usas GitHub
 
-![git](./md/git-7.jpg)
+<div align="center">
+  <img src="./md/git-7.jpg" alt="img">
+</div>
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### ¿Porqué usar Git?
 Usamos Git solo para cambiar los cambios realizados en un archivo.
@@ -90,29 +107,43 @@ Usamos Git solo para cambiar los cambios realizados en un archivo.
 
 Git fue creado por la fundación Linux principalmente por Linus Torbal y es el sistema que maneja el kernel de linux.
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### Instalar Git en Windows
 
 Asegurate de instalar git bash here 
 
-![git](./md/git-8.jpg)
+<div align="center">
+  <img src="./md/git-8.jpg" alt="img">
+</div>
 
 Para una fuente suave en la linea de comandos
 
-![git](./md/git-9.jpg)
+<div align="center">
+  <img src="./md/git-9.jpg" alt="img">
+</div>
 
 Cambiar el editor visual por defecto de git
 
-![git](./md/git-10.jpg)
+<div align="center">
+  <img src="./md/git-10.jpg" alt="img">
+</div>
 
 Estas opciones tienen que ver con que windows no es un entorno amigable para programadores.
 
 Git se encarga de instala git bsah para hacernos la vida más facil (sololo podremos usar git en git bash)
 
-![git](./md/git-12.jpg)
+<div align="center">
+  <img src="./md/git-12.jpg" alt="img">
+</div>
 
 Pero tambien podemos usar git desde la linea de comandos nativa de windows y de terceros (git bash)
 
-![git](./md/git-11.jpg)
+<div align="center">
+  <img src="./md/git-11.jpg" alt="img">
+</div>
 
 EL tipo de libreria que queremos usar para la seguridad
 
@@ -120,7 +151,9 @@ OpenSSL es una libreria nativa de Linux y Unix para que toda tu información est
 
 Pero windows tiene sus propias librerias con la que manejas la seguridad a nivel de microsoft.
 
-![git](./md/git-13.jpg)
+<div align="center">
+  <img src="./md/git-13.jpg" alt="img">
+</div>
 
 Windows y Linux manejan el enter de forma distinta, ahora se nos presentan 3 opciones
 
@@ -133,11 +166,15 @@ Windows y Linux manejan el enter de forma distinta, ahora se nos presentan 3 opc
 
 La primera version te hace más comptible con todo el mundo :)
 
-![git](./md/git-14.jpg)
+<div align="center">
+  <img src="./md/git-14.jpg" alt="img">
+</div>
 
 Ahora te pregunta si quieres usar su emluador de linux (MinTTY) o la consola por defecto de windows
 
-![git](./md/git-15.jpg)
+<div align="center">
+  <img src="./md/git-15.jpg" alt="img">
+</div>
 
 3 opciones más
 * File system caching
@@ -147,13 +184,23 @@ Ahora te pregunta si quieres usar su emluador de linux (MinTTY) o la consola por
 * Symbolic Links
   * Es como los accesos directos de windows pero que funciona en linux
 
-![git](./md/git-16.jpg)
+<div align="center">
+  <img src="./md/git-16.jpg" alt="img">
+</div>
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+</div>
 
 ### Archivos binarios y de texto plano
 
 Los archivos de texto plano se muestran tal cual como se ven y puede ser abierto por editores de textos mientras que los archivos binarios estan estructuradas en ceros y unos en este caso word lo entiende y lo muestra graficamente mientras que uneditor de texto no lo entiende.
 
 En el mundo de got lo que nosotros vamos a poder editar es texto plano.
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### Terminal y linea de comandos
 
@@ -196,6 +243,10 @@ Lo primero que hay que entender es la diferencia de estructura de archivos entre
 * COMANDO --help
   * ver la lista de parametros para cada comando
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ## Comandos básicos de git
 
 ### Notas
@@ -212,12 +263,20 @@ Usar el doble guion significa que vas a usar una palabra como --global
 
 Para salir de lugares raros :v
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### git init
 
 Suceden 2 cosas
 
 * Se crea un area en memoria ram que se llama staging donde se iran agregando los cambios.
 * Se crea el repositorio ( la carpeta .git) y es donde  van a estar todos los cambios al final de tu proyecto.
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git add
 
@@ -227,9 +286,17 @@ Una vez haces cambios en tus archivos se agregan al staging area usando el coman
 
 Antes de ejecutar el comando los archivos no son rastreados (untracked) y no estan el staging y una vez se ejecute el comando estos pasan a ser rastreados (tracked) y pasan a estar en staging
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### git status
 
 Para saber que archivos estan el staging
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git commit
 
@@ -252,6 +319,10 @@ esto atuomaticamente hace el git add de los cambios __Solo funciona con archivos
 #### git commit -am "MENSAJE"
 
 juntamos los 2 comandos anteriores
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git log
 
@@ -277,6 +348,10 @@ Te muestra todo el historial de tus commits con un gráfico y comprimido
 
 Para salir del log
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### git checkout
 
 #### git checkout -- <FILE_NAME>
@@ -298,6 +373,10 @@ Te permite moverte entre distintas ramas.
 #### git checkout -b <BRANCH_NAME>
 
 Te ptermite crear y moverte a la rama nueva.
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git branch
 
@@ -327,7 +406,11 @@ Si se esta trabajando con un repositorio remoto entonces se tiene que hacer un p
 git push -u origin :<BRANCH_NAME>
 ```
 
-#### Ramas
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Ramas
 
 Por defecto tu estas en una rama master con sus distintas versines (commits)
 
@@ -354,6 +437,10 @@ HotFix         v1(v-actual)         ->       v2
 
 Ahora que ya solucionaste el bug en otra rama es momento de llevar esos cambios a la version actual en la rama master
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### git merge
 
 Te permite unir lo que tienes en tu directorio local con lo que esta en tú repositorio local
@@ -379,6 +466,10 @@ Master                 v-final   ->   v-final-final
 Development          v3
 
 Pero juntar 2 ramas puede romper con el código y a esto se le llama conflicto.
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git config
 
@@ -408,6 +499,10 @@ Para cambiar el email de la configuración global
 
 crear alias para un comando de git
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### git show
 
 Te muestra todos los cambios de tu proyecto entre el commit actual y el anterior
@@ -428,6 +523,10 @@ Te muestra la historia de tus ramas
 
 Te muestra la historia de tus ramas pero con más detalles
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### git diff
 
 Te muestra los cambios entre tus archivos locales y lo que este en staging (los que estan siendo rastreados, que se les hizo como minimo 1 git add)
@@ -435,6 +534,10 @@ Te muestra los cambios entre tus archivos locales y lo que este en staging (los 
 #### git diff <COMMIT_ID> <COMMIT_ID>
 
 Te muestra todos los cambios entre los distintos commit
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git reset 
 
@@ -450,6 +553,10 @@ Similiar a --hard pero mantenemos lo que este en staging
 
 Elimina todos los archivos que se esten rastreando en el staging
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### git rm
 
 No se puede usar sin más tiene que tener un flag
@@ -464,6 +571,10 @@ Funciona similiar a git reset HEAD
 
 Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ## Flujo de trabajo básico
 
 Antes que nada se necesita un repositorio remoto puede ser github, gitlab, bitbucket el que quieras
@@ -474,13 +585,23 @@ Antes que nada se necesita un repositorio remoto puede ser github, gitlab, bitbu
 
 Se trae lor archivos a dos lugares, una copia del master a tu directorio local y crea la base de datos de todos los cambios historicos en el repositorio local y deja staging limpio.
 
-![git](./md/git-17.jpg)
+<div align="center">
+  <img src="./md/git-17.jpg" alt="img">
+</div>
+
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git push
 
 Envio todos mis commits de mi repositorio local al servdior remoto
 
-![git](./md/git-18.jpg)
+<div align="center">
+  <img src="./md/git-18.jpg" alt="img">
+</div>
+
 
 #### git push <REMOTE | origin por lo general> <BRANCH_NAME | master por lo general>
 
@@ -494,23 +615,44 @@ Para enviar los tags
 
 Para eliminar un tag en el repositorio remoto
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### git fetch
 
 Te trae los nuevos commits del repositorio remoto al repositorio local pero NO los trae a nuestro directorio de trabajo local
 
-![git](./md/git-19.jpg)
+<div align="center">
+  <img src="./md/git-19.jpg" alt="img">
+</div>
+
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git merge
 
 Para que se copie en nuestro directorio de trabajo local tengo que fucionar los ultima version que esta en el repositorio local con mi version actual (la de mi directorio de trabajo local)
 
-![git](./md/git-20.jpg)
+<div align="center">
+  <img src="./md/git-20.jpg" alt="img">
+</div>
+
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git pull
 
 Ejecuta fetch y merger a la vez para traer los ultimos cambios en el repositorio remoto y combinarlos con nuestro repositorio global y directorio global en un solo paso
 
-![git](./md/git-21.jpg)
+<div align="center">
+  <img src="./md/git-21.jpg" alt="img">
+</div>
+
 
 #### git pull <REMOTE | origin por lo general> <BRANCH_NAME | master por lo general>
 
@@ -519,6 +661,10 @@ Para poder subitr los commits al repositorio remoto
 #### git pull <REMOTE | origin por lo general> <BRANCH_NAME | master por lo general> --allow-unrelated-histories
 
 Para poder subitr los commits al repositorio remoto de manera forzada
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ## Trabajando con repositorios remotos
 
@@ -542,6 +688,10 @@ Nos permite eliminar un remote
 
 Nos permite cambiar la url remota
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### SSH
 
 #### ssh-keygen -t rsa -b 4096 -C "<MESSAGE>"
@@ -556,6 +706,10 @@ Comprobar si el sistema de cifrado está activo
 
 Informar al sistema la ubicación de nuestra llave privada
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### alias
 
 te muestra los alias creados
@@ -563,6 +717,10 @@ te muestra los alias creados
 #### alias <ALIAS_NAME>=<"COMAND">
 
 crear un alias para un comando
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
 
 ### git tag
 
@@ -576,6 +734,14 @@ Agregar un tag
 
 Eliminarar un tag
 
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
 ### gitk
 
 nos abre un gestor visual de las historias de git
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
