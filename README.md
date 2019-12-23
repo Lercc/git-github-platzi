@@ -2,7 +2,7 @@
 
 <div align="center">
   <h1>Git</h1>
-  <img src="https://www.stickpng.com/assets/images/5847f981cef1014c0b5e48be.png" alt="git logo" height="300px">
+  <img src="./md/git.png" alt="git logo" height="300px">
   <h5 style="font-weight:bold;" >Git</h5>
 </div>
 
