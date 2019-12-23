@@ -57,3 +57,10 @@ body {
   color: #fff;
   text-align: center;
 }
+.footer a {
+  color: rgb(51, 54, 206);
+  text-decoration: none;
+}
+.footer a:hover {
+text-decoration: underline;
+}
