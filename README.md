@@ -1,15 +1,45 @@
 # Git - Platzi
 
 <div align="center">
-  <h1>Git</h1>
   <img src="./md/git.png" alt="git logo" height="300px">
-  <h5 style="font-weight:bold;" >Git</h5>
+  <h5 style="font-weight:bold;" >Git & GitHub by aomine</h5>
 </div>
 
 ## INDEX
 
 1. [Introducción](#Introducción)
+  * [¿Qué es Git?](#¿Qué-es-Git?)
+  * [¿Porqué usar Git?](#Porqué-usar-Git?)
+  * [Instalar Git en Windows](#Instalar-Git-en-Windows)
+  * [Archivos binarios y de texto plano](#Comandos-básicos-de-git)
+  * [Terminal y linea de comandos](#Terminal-y-linea-de-comandos)
 2. [Comandos básicos de git](#Comandos-básicos-de-git)
+  * [Notas](#Notas)
+  * [git init](#git-init)
+  * [git add](#git-add)
+  * [git status](#git-status)
+  * [git commit](#git-commit)
+  * [git log](#git-log)
+  * [git checkout](#git-checkout)
+  * [git branch](#git-branch)
+  * [git merge](#git-merge)
+  * [git config](#git-config)
+  * [git show](#git-show)
+  * [git diff](#git-diff)
+  * [git reset](#git-reset)
+  * [git rm](#git-rm)
+3. [Flujo de trabajo básico](#Flujo-de-trabajo-básico)
+  * [git clone](#git-clone)
+  * [git push](#git-push)
+  * [git fetch](#git-fetch)
+  * [git merge](#git-merge)
+  * [git pull](#git-pull)
+4. [Trabajando con repositorios remotos](#Trabajando-con-repositorios-remotos)
+  * [git remote](#git-remote)
+  * [SSH](#SSH)
+  * [alias](#alias)
+  * [git tag](#git-tag)
+  * [gitk](#gitk)
 
 ## Introducción
 
@@ -185,7 +215,9 @@ Suceden 2 cosas
 * Se crea un area en memoria ram que se llama staging donde se iran agregando los cambios.
 * Se crea el repositorio ( la carpeta .git) y es donde  van a estar todos los cambios al final de tu proyecto.
 
-### git add <FILE_NAME>
+### git add
+
+#### git add <FILE_NAME> or .
 
 Una vez haces cambios en tus archivos se agregan al staging area usando el comando git add . todos los archivos modificados pasan a vivir en staging donde esperan a que se envie al repositorio.
 
@@ -205,15 +237,15 @@ Cada commit enviado al repositorio es una nueva version de cambios de tu proyect
 
 Al usarlo se nos abrira una pantalla rara que es un editor de codigo dentreo del mundo de git llamado vim
 
-### git commit -m "MENSAJE"
+#### git commit -m "MENSAJE"
 
 Para poder agregarle un mensaje a tu commit (es lo más recomendable)
 
-### git commit -a
+#### git commit -a
 
 esto atuomaticamente hace el git add de los cambios __Solo funciona con archivos que ya estabam el staging previamente__ si creo un archivo nuevo esto no va a funcionar.
 
-### git commit -am "MENSAJE"
+#### git commit -am "MENSAJE"
 
 juntamos los 2 comandos anteriores
 
@@ -318,7 +350,11 @@ HotFix         v1(v-actual)         ->       v2
 
 Ahora que ya solucionaste el bug en otra rama es momento de llevar esos cambios a la version actual en la rama master
 
-### git merge <BRANCH>
+### git merge
+
+Te permite unir lo que tienes en tu directorio local con lo que esta en tú repositorio local
+
+#### git merge <BRANCH>
 
 Te permite unir 2 ramas
 
@@ -363,6 +399,10 @@ Para cambiar el usuario de la configuración global
 ##### git config --global user.email "<EMAIL>"
 
 Para cambiar el email de la configuración global
+
+#### git config --global ailas.<ALIAS> "<COMAND WITHOUT GIT>"
+
+crear alias para un comando de git
 
 ### git show
 
@@ -420,11 +460,13 @@ Funciona similiar a git reset HEAD
 
 Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
 
-## 3. Flujo de trabajo básico
+## Flujo de trabajo básico
 
 Antes que nada se necesita un repositorio remoto puede ser github, gitlab, bitbucket el que quieras
 
-### git clone <URL >
+### git clone
+
+#### git clone <REPOSITORY_URL>
 
 Se trae lor archivos a dos lugares, una copia del master a tu directorio local y crea la base de datos de todos los cambios historicos en el repositorio local y deja staging limpio.
 
@@ -474,7 +516,7 @@ Para poder subitr los commits al repositorio remoto
 
 Para poder subitr los commits al repositorio remoto de manera forzada
 
-## 4. Trabajando con repositorios remotos
+## Trabajando con repositorios remotos
 
 ### git remote 
 
@@ -496,15 +538,17 @@ Nos permite eliminar un remote
 
 Nos permite cambiar la url remota
 
-### ssh-keygen -t rsa -b 4096 -C "<MESSAGE>"
+### SSH
+
+#### ssh-keygen -t rsa -b 4096 -C "<MESSAGE>"
 
 Generar llave publica y privada
 
-### eval $(ssh-agent -s)
+#### eval $(ssh-agent -s)
 
 Comprobar si el sistema de cifrado está activo
 
-### ssh-add <SECRET_KEY_ROUTE>
+#### ssh-add <SECRET_KEY_ROUTE>
 
 Informar al sistema la ubicación de nuestra llave privada
 
@@ -515,10 +559,6 @@ te muestra los alias creados
 #### alias <ALIAS_NAME>=<"COMAND">
 
 crear un alias para un comando
-
-### git config --global ailas.<ALIAS> "<COMAND WITHOUT GIT>"
-
-crear alias para un comando de git
 
 ### git tag
 
