@@ -415,16 +415,16 @@ git push -u origin :<BRANCH_NAME>
 Por defecto tu estas en una rama master con sus distintas versines (commits)
 
 ```
-Master      v1   ->   v2   ->   v3   ->   v-actual
+Master      v1      →     v2      →     v3    →     v-actual
 ```
 
 Pero ahora decidimos hacer algunos experimentos pero no queremos tocar el código actual asi que creamos una rama llamada Development teniendo como base la v3 del proyecto.
 
-Master      v1   ->   v2   ->   v3   ->   v-actual
-
-↓ (v3 of Mater to v1 of Development)
-
-Development                     v1(v3)   ->  v2   ->   v3
+```
+Master      v1      ->      v2      ->      v3      ->      v-actual
+                                                      ↓ 
+Development                                  v1     ->      v2      ->      v3
+```
 
 La rama Development se convirtio en algo completamente distinto a la de master
 
