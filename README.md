@@ -321,7 +321,7 @@ Pero juntar 2 ramas puede romper con el código y a esto se le llama conflicto.
 
 Te mostrara una lista de como usarlo
 
-#### git config --lsit
+#### git config --lsit (-list)
 
 Te mostrara la configuración de tu git
 
@@ -449,5 +449,7 @@ Nos muestra vervalmente los remotes existentes
 
 Nos permite eliminar un remote
 
+#### git remote set-url origin <URL>
 
+Nos permite cambiar la url remota
 
