@@ -23,7 +23,7 @@
   - [git checkout](#git-checkout)
   - [git branch](#git-branch)
   - [Ramas](#ramas)
-  - [merge](#merge)
+  - [Merge](#merge)
   - [git config](#git-config)
   - [git show](#git-show)
   - [git diff](#git-diff)
@@ -46,7 +46,7 @@
 
 ### ¿Qué es Git?
 
-Es un control de versiones que guarda los cambios de archivos.
+Es un control de versiones que guarda los cambios realziados en los archivos de tu proyecto.
 
 <div align="center">
   <img src="./md/git-1.jpg" alt="img">
@@ -164,7 +164,7 @@ Windows y Linux manejan el enter de forma distinta, ahora se nos presentan 3 opc
 * se lo dejamos a una fuerza superior xd
   * no se realizan conversiones
 
-La primera version te hace más comptible con todo el mundo :)
+La primera versión te hace más comptible con todo el mundo :)
 
 <div align="center">
   <img src="./md/git-14.jpg" alt="img">
@@ -210,23 +210,23 @@ Lo primero que hay que entender es la diferencia de estructura de archivos entre
   * Muestra la ruta actual
 * cd (change directory)
   * Movernos entre los directorios
-  * si se nos muestra un ~ -> nos encontramos en user
-  * si se nos muestra un / -> nos encontramos en la raiz del disco
+  * si se nos muestra un ~ → nos encontramos en user
+  * si se nos muestra un / → nos encontramos en la raiz del disco
   * cd ../ para salir del directorio 
-  * cd / -> para ir a la raiz de mi disco
-  * cd -> para ir a mi usuario 
+  * cd / → para ir a la raiz de mi disco
+  * cd → para ir a mi usuario 
   * echo cd RUTA >> ~.bashrc
 * ls
   * mostros todos los archivos del directorio
-  * ls -l -> mostrar todos los archivos y que me los muestre en una lista
-  * ls -a -> mostrar todos los archivos incluidos los ocultos
-  * ls -al -> mostrar todos los archivos incluidos los ocultos y que me los muestre en una lista
+  * ls -l → mostrar todos los archivos y que me los muestre en una lista
+  * ls -a → mostrar todos los archivos incluidos los ocultos
+  * ls -al → mostrar todos los archivos incluidos los ocultos y que me los muestre en una lista
 * clear
   * limpiar la consola
   * tambien podemos usar ctrl + l
 * Windos no es sensible a mayusculas puedes ingrear a User com cd User o cd user (esto no es así en mac o linux)
 * tab
-  * te autocompleta la sentencia cd u + tab -> cd Users/
+  * te autocompleta la sentencia cd u + tab → cd Users/
 * mkdir (make directory)
   * para crear una carpeta
 * touch
@@ -239,7 +239,7 @@ Lo primero que hay que entender es la diferencia de estructura de archivos entre
   * para ejecutar ese comando
 * rm (remove)
   * remover archivos
-  * rm -r -> para borrar directorios 
+  * rm -r → para borrar directorios 
 * COMANDO --help
   * ver la lista de parametros para cada comando
 
@@ -304,7 +304,7 @@ Todos los archivos modificados y que vivian en staging pasan al repositorio por 
 
 Los números raros que salen en cada commit son el id en la base de datos.
 
-Cada commit enviado al repositorio es una nueva version de cambios de tu proyecto v1, v2, v3... vn.
+Cada commit enviado al repositorio es una nueva versión de cambios de tu proyecto v1, v2, v3... vn.
 
 Al usarlo se nos abrira una pantalla rara que es un editor de codigo dentreo del mundo de git llamado vim
 
@@ -427,44 +427,48 @@ Master      v1      →      v2      →      v3      →      v-actual
 
 Development                               v1     →      v2      →      v3
 ```
-sdasdasdasd
-asdasdasd
-adsadasd
+
 La rama Development se convirtio en algo completamente distinto a la de master
 
 Ahora digamos que estabas cambiando cosas y salio un bug en la versión actual por lo cual creas una rama especial partiendo de la versión actual de la rama master.
 
+
+```
 Master      v-actual
 
-↓ (v-actual of Mater to v1 of HotFix)
+                ↓
 
+HotFix         v1      →     v2
+```
 
-HotFix         v1(v-actual)         ->       v2
-
-Ahora que ya solucionaste el bug en otra rama es momento de llevar esos cambios a la version actual en la rama master
+Ahora que ya solucionaste el bug en otra rama es momento de llevar esos cambios a la versión actual en la rama master
 
 <div align="right">
   <small><a href="#index">🡡 volver al inicio</a></small>
 </div>
 
 
-### merge
+### Merge
 
-Ahora que ya tienes la versin de HotFix en Master se creo una nueva version que llamaremos version final
+Ahora que ya tienes la versión de HotFix en Master se creo una nueva versión que llamaremos versión final
 
-Master      v-actual         v-final
+```
+Master      v-actual        v-final
 
-↓ (v-actual of Master to v1 of HotFix) - ↑ (v2 of HotFix to Master in v-final)
+                ↓             ↑
 
-HotFix         v1         ->       v2
+HotFix         v1      →     v-fix
+```
 
-Pero ahora ya terminaste tus experimentos y quieres unirlos a la version final en la rama master
+Pero ahora ya terminaste tus experimentos y quieres unirlos a la versión final en la rama master
 
-Master                 v-final   ->   v-final-final
+```
+Master          v-final     →     v-final-final
 
-↑ (v3 of Development to Master in v-final-final)
+                  ↑
 
-Development          v3
+Development     v-final
+```
 
 Pero juntar 2 ramas puede romper con el código y a esto se le llama conflicto.
 
@@ -476,7 +480,7 @@ Pero juntar 2 ramas puede romper con el código y a esto se le llama conflicto.
 
 Te mostrara una lista de como usarlo
 
-#### git config --lsit (-list)
+#### git config --list (-list)
 
 Te mostrara la configuración de tu git
 
@@ -635,7 +639,7 @@ Te trae los nuevos commits del repositorio remoto al repositorio local pero NO l
 
 ### git merge
 
-Para que se copie en nuestro directorio de trabajo local tengo que fucionar los ultima version que esta en el repositorio local con mi version actual (la de mi directorio de trabajo local)
+Para que se copie en nuestro directorio de trabajo local tengo que fucionar los ultima versión que esta en el repositorio local con mi versión actual (la de mi directorio de trabajo local)
 
 <div align="center">
   <img src="./md/git-20.jpg" alt="img">
