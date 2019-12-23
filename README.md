@@ -426,7 +426,7 @@ Te muestra la historia de tus ramas pero con más detalles
 
 ### git diff
 
-Te muestra los cambios entre tus archivos locales y lo que este en staging
+Te muestra los cambios entre tus archivos locales y lo que este en staging (los que estan siendo rastreados, que se les hizo como minimo 1 git add)
 
 #### git diff <COMMIT_ID> <COMMIT_ID>
 
