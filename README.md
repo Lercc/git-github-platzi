@@ -23,7 +23,7 @@
   - [git checkout](#git-checkout)
   - [git branch](#git-branch)
   - [Ramas](#ramas)
-  - [git merge](#git-merge)
+  - [merge](#merge)
   - [git config](#git-config)
   - [git show](#git-show)
   - [git diff](#git-diff)
@@ -441,13 +441,8 @@ Ahora que ya solucionaste el bug en otra rama es momento de llevar esos cambios 
   <small><a href="#index">🡡 volver al inicio</a></small>
 </div>
 
-### git merge
 
-Te permite unir lo que tienes en tu directorio local con lo que esta en tú repositorio local
-
-#### git merge <BRANCH>
-
-Te permite unir 2 ramas
+### merge
 
 Ahora que ya tienes la versin de HotFix en Master se creo una nueva version que llamaremos version final
 
@@ -640,6 +635,9 @@ Para que se copie en nuestro directorio de trabajo local tengo que fucionar los 
   <img src="./md/git-20.jpg" alt="img">
 </div>
 
+#### git merge <BRANCH_NAME>
+
+Te permite unir 2 ramas
 
 <div align="right">
   <small><a href="#index">🡡 volver al inicio</a></small>
