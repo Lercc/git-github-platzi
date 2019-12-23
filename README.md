@@ -414,7 +414,9 @@ git push -u origin :<BRANCH_NAME>
 
 Por defecto tu estas en una rama master con sus distintas versines (commits)
 
+```
 Master      v1   ->   v2   ->   v3   ->   v-actual
+```
 
 Pero ahora decidimos hacer algunos experimentos pero no queremos tocar el código actual asi que creamos una rama llamada Development teniendo como base la v3 del proyecto.
 
