@@ -1,6 +1,17 @@
 # Git - Platzi
 
-## 1. Introducción
+<div align="center">
+  <h1>Git</h1>
+  <img src="https://www.stickpng.com/assets/images/5847f981cef1014c0b5e48be.png" alt="git logo" height="300px">
+  <h5 style="font-weight:bold;" >Git</h5>
+</div>
+
+## INDEX
+
+1. [Introducción](#Introducción)
+2. [Comandos básicos de git](#Comandos-básicos-de-git)
+
+## Introducción
 
 ### ¿Qué es Git?
 Es un control de versiones que guarda los cambios de archivos.
@@ -151,7 +162,7 @@ Lo primero que hay que entender es la diferencia de estructura de archivos entre
 * COMANDO --help
   * ver la lista de parametros para cada comando
 
-## 2. Comandos básicos de git
+## Comandos básicos de git
 
 ### Notas
 
@@ -214,6 +225,18 @@ Para ver todo el historial de commits
 
 vamos a poder ver los cambios especificos de los archivos en cada cmommit 
 
+#### git log --all
+
+Te muestra todo el historial de tus commits
+
+#### git log --all -graph
+
+Te muestra todo el historial de tus commits con un gráfico
+
+#### git log --all -graph --decorate --oneline
+
+Te muestra todo el historial de tus commits con un gráfico y comprimido
+
 #### :q
 
 Para salir del log
@@ -255,7 +278,7 @@ Te perimte eliminar una rama, pero solo si esta no contiene trabajos sin fuciona
 Si se esta trabajando con un repositorio remoto entonces se tiene que hacer un push
 
 ```
-git push -u origin <BRANCH_NAME>
+git push -u origin :<BRANCH_NAME>
 ```
 
 #### git branch -D <NAME>
@@ -265,7 +288,7 @@ te permite forzar la eliminacion de la rama
 Si se esta trabajando con un repositorio remoto entonces se tiene que hacer un push
 
 ```
-git push -u origin <BRANCH_NAME>
+git push -u origin :<BRANCH_NAME>
 ```
 
 #### Ramas
@@ -325,7 +348,7 @@ Te mostrara una lista de como usarlo
 
 Te mostrara la configuración de tu git
 
-#### git config --lsit --show-origin
+#### git config --list --show-origin
 
 Podras ver donde estan guardadas las configuraciones de windows
 
@@ -348,6 +371,18 @@ Te muestra todos los cambios de tu proyecto entre el commit actual y el anterior
 #### git show <FILE_NAME>
 
 Te muestra todos los cambios de un archivo entre el commit actual y el anterior
+
+#### git show-ref --tags
+
+Te muestra los tags con su hash
+
+#### git show-branch
+
+Te muestra la historia de tus ramas
+
+#### git show-branch --all
+
+Te muestra la historia de tus ramas pero con más detalles
 
 ### git diff
 
@@ -389,7 +424,7 @@ Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo qu
 
 Antes que nada se necesita un repositorio remoto puede ser github, gitlab, bitbucket el que quieras
 
-### git clone <URL>
+### git clone <URL >
 
 Se trae lor archivos a dos lugares, una copia del master a tu directorio local y crea la base de datos de todos los cambios historicos en el repositorio local y deja staging limpio.
 
@@ -404,6 +439,14 @@ Envio todos mis commits de mi repositorio local al servdior remoto
 #### git push <REMOTE | origin por lo general> <BRANCH_NAME | master por lo general>
 
 Comando pra enviar al repositorio remoto los commits de mi rama especifica
+
+#### git push <REMOTE | origin por lo general> --tags
+
+Para enviar los tags
+
+#### git push <REMOTE | origin por lo general> :refs/tags/<TAG_NAME>
+
+Para eliminar un tag en el repositorio remoto
 
 ### git fetch
 
@@ -437,7 +480,7 @@ Para poder subitr los commits al repositorio remoto de manera forzada
 
 Nos muestra los remotes existentes
 
-#### git remote add origin <URL>
+#### git remote add origin <NEW_URL>
 
 Para poder agregar la url del repositorio remoto de donde nos traeremos los cambios y hacia donde enviaremos nuestros cambios
 
@@ -449,7 +492,46 @@ Nos muestra vervalmente los remotes existentes
 
 Nos permite eliminar un remote
 
-#### git remote set-url origin <URL>
+#### git remote set-url <REMOTE_NAME> <NEW_URL>
 
 Nos permite cambiar la url remota
 
+### ssh-keygen -t rsa -b 4096 -C "<MESSAGE>"
+
+Generar llave publica y privada
+
+### eval $(ssh-agent -s)
+
+Comprobar si el sistema de cifrado está activo
+
+### ssh-add <SECRET_KEY_ROUTE>
+
+Informar al sistema la ubicación de nuestra llave privada
+
+### alias
+
+te muestra los alias creados
+
+#### alias <ALIAS_NAME>=<"COMAND">
+
+crear un alias para un comando
+
+### git config --global ailas.<ALIAS> "<COMAND WITHOUT GIT>"
+
+crear alias para un comando de git
+
+### git tag
+
+Te muestra los tags
+
+#### git tag -a <TAG_NAME> -m "<MESSAGE>" <COMMIT_ID>
+
+Agregar un tag
+
+#### git tag -d <TAG_NAME>
+
+Eliminarar un tag
+
+### gitk
+
+nos abre un gestor visual de las historias de git
