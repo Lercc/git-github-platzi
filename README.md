@@ -49,6 +49,18 @@
   - [GitHub Pages](#github-pages)
 - [6. Multiples entornos de trabajo](#multiples-entornos-de-trabajo)
   - [Git Rebase](#git-rebase)
+  - [Git Stash](#git-stash)
+  - [Git Clean](#git-clean)
+  - [Git cherry-pick](#git-cherry-pick)
+- [7. Comandos en Git para casos de emergencía](#comandos-en-git-para-casos-de-emergencía)
+  - [Amend](#amend)
+  - [Reflog](#reflog)
+  - [Reset](#reset)
+  - [Grep](#grep)
+  - [Log](#log)
+- [8. Bonus](#bonus)
+  - [Saber cuantos commits hizo cada colaborador](#saber-cuantos-commits-hizo-cada-colaborador)
+  - [Saber quien tienen la culpa](#saber-quien-tienen-la-culpa)
 
 ## Introducción
 
@@ -414,6 +426,14 @@ Si se esta trabajando con un repositorio remoto entonces se tiene que hacer un p
 git push -u origin :<BRANCH_NAME>
 ```
 
+#### git branch -r
+
+Te permite ver tus ramas remotas(las de tu repositorio remoto)
+
+#### git branch -a
+
+Te permite ver tus ramas y tus ramas remotas
+
 <div align="right">
   <small><a href="#index">🡡 volver al inicio</a></small>
 </div>
@@ -582,7 +602,7 @@ Funciona similiar a git reset HEAD
 
 #### git rm --force <FILE_NAME>
 
-Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+Elimina los archivos de Git y del disco duro de los archivos que esten en staging. Git siempre guarda todo, por lo que podemos acceder al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
 
 <div align="right">
   <small><a href="#index">🡡 volver al inicio</a></small>
@@ -833,3 +853,211 @@ Pero si quieres que este sea la raiz de tu cuenta el proyecto tiene que llaramrs
 ### Git Rebase
 
 Significa que agarramos un rama externa completa y la pegamos a nuestra rama maestra, esto es una muy mala práctica eviandolas a repositorios remotos esto solo lo deberias hacer internamente (en local)
+
+### git rebase <BRANCH_NAME | master>
+
+Estando en la rama experimental ejecutamos el comando hacia la rama maestra.
+
+Es importante hacer rebase primero a la rama que no deseamos y despues ejecutar rebase a la rama masestra
+
+Una vez terminado el proceso de rebase eliminamos la rama experimental
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Git Stash
+
+Planteemos un nuevo escenario
+
+Digamos que estoy en la rama master y realizamos modificaciones de toda la vida pero tambien una modifcación no deseada que rompe nuestro código y tengo que irme a una rama anterior para ver cual era el codigo que funciona pero obviamente no qiero hacerle add ni commit a esas modificaciones no deseadas pero quiero guardar las otras modicaciones en algún lugar y eso lo hacemos con stash
+
+Tambien podemos hacer cambios en nuestro proyecto no guardarlos pero si guardarlos en el stash y crear una nueva rama y pegar ahi esos cambios manteniendo nuestro master
+
+#### git stash
+
+Guarda las modificaciones no guardadas y nos regresa a un commit anterior
+
+##### git stash list
+
+Nos muestra una lista de los stashs
+
+##### git stash pop
+
+Para volver a traer nuestras modificaiones no guardadas pero si guardadas en nuestro stsah
+
+##### git stash branch <BRANCH_NAME>
+
+Nos permite crear una nueva rama con el nombre indicado movernos a ella y pegar ahi los cambios que esten en stash
+
+##### git stash drop
+
+Nos permite eliminar los stash guardados
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Git Clean
+
+Es util cuando tenemos archivos que no son parte de nuestro directorio de trabajo y que no deberiamos agregar al repositorio local
+
+Con el comando git clean podremos eliminar los archivos que aun no se an guardado en staging (esten siendo trackeados)
+
+#### git clean --dry-run
+
+Nos dara una lista de los elementos que se eliminaran
+
+#### git clean -f
+
+Eliminar todos los archivos de la lista, pero no eliminara las carpetas (SOLO archivos y carpetas no trackeadas) las carpetas tendras que eliminarlas a mano o con los comandos respectivos
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Git cherry-pick
+
+Se usa para traer commits de otras ramas a nuestra rama maestra sin hacer un merge completo de las 2 ramas
+
+#### Git cherry-pick <COMMIT_HASH>
+
+Nos trae el commit indicado a la rama en la que estemos
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+## Comandos en Git para casos de emergencía
+
+### Amend
+
+Tenemos en mente realizar 2 cambios y supuestamente los realizamo  y hacemos el commit respectivo con el mensaje de los 2 cambios pero nos acordamos que se nos olvido uno de los cambios y lo haces pero no quieres hacer otro commit, ahi entra el siguiente comando
+
+Antes de realizarnos tenemos que agregar los cambios con el git add <FILE_NAME> de toda loa vida si no lo haces no funcionara
+
+#### git commit --amend
+
+Nos permite insertar los cambios realizados y guardados en nuestro ultimo commit al hacerlo tendremos la opción de cambiar el mensaje de ese commit
+
+y listo nadie se dara cuenta de tu error :v
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Reflog
+
+Procedemos a destruir el proyecto literalmente
+
+* borramos el index.html
+* nos vamos a header y hacemos merge con master
+* y luego borramos header
+
+#### git reflog
+
+Nos muestra un historia de los comandos que hicimos en git
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Reset
+
+Ya que nuestro proyecto esta destruido tendremos que hacer algo para arreglarlo y lo lograremos con el siguiente comando
+
+##### git reset --soft <REFLOG_HASH>
+
+Te resetea hasta el punto del hash especificado pero te mantiene lo que tenias en staging
+
+##### git reset --hard <REFLOG_HASH>
+
+Te resetea absolutamente todo hasta el punto del hash especificado incluyendo lo que tengas en staging
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Grep
+
+Que pasa si nos interesa saber cuantas veces usasmos una palabra en nuestro proyecto
+
+#### git grep <TEXT_TO_FIND> || "TEXT_TO_FIND" -> entre comillas si es una etiqueta
+
+Nos muestra todos los lugares donde esta la palabra buscada
+
+#### git grep -n <TEXT_TO_FIND>
+
+Nos muestra todos los lugares donde esta la palabra buscada y en que linea se encuentra
+
+#### git grep -n <TEXT_TO_FIND>
+
+Nos muestra cuantas veces se repite la palabra buscada en cada archivo
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Log
+
+Pero que pasa si queremos ver todas las veces que usamos una palabra en el historial de commits
+
+#### git log -S "TEXT_TO_FIND"
+
+Nos muestra todos los commits donde se encuentra la palabra buscada
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+## Bonus
+
+### Saber cuantos commits hizo cada colaborador
+
+#### git shortlog
+
+Nos muestra un log por persona de lo que hizo cada colaborador
+
+##### git shortlog -sn
+
+Nos muestra las personas que hicieron ciertos commits y cuantos hicieron
+
+##### git shortlog -sn --all
+
+Nos muestra las personas que hicieron ciertos commits y cuantos hicieron hasta los que fueron borrados
+
+##### git shortlog -sn --all --no-merges
+
+Nos muestra las personas que hicieron ciertos commits y cuantos hicieron hasta los que fueron borrados pero sin los merges
+
+Y ya que es muy largo es buena idea hacerle un alias
+
+```
+git config --global alias.stats 'shortlog -sn --all --no-merges'
+```
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Saber quien tienen la culpa
+
+#### git blame <FILE_NAME>
+
+Nos muestra que personas hicieron que cambios del archivo especifico
+
+#### git blame -c <FILE_NAME>
+
+Nos muestra que personas hicieron que cambios del archivo especifico pero con mejor identación
+
+#### git blame -c <FILE_NAME> -L<NUMBER_OF_LINE>,<NUMBER_OF_LINE>
+
+Nos muestra que personas hicieron que cambios del archivo especifico pero con mejor identación
+
+#### git blame --help
+
+Nos abrira el manual del comando que vivde dentro de nuestra computadora y funciona para todos los comandos de git
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
