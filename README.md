@@ -44,6 +44,11 @@
 - [5. Flujo de trababo profesionales](#flujo-de-trababo-profesionales)
   - [Pull Request](#pull-request)
   - [Fork](#fork)
+  - [Git Ignore](#git-ignore)
+  - [Readme](#readme)
+  - [GitHub Pages](#github-pages)
+- [6. Multiples entornos de trabajo](#multiples-entornos-de-trabajo)
+  - [Git Rebase](#git-rebase)
 
 ## Introducción
 
@@ -789,3 +794,42 @@ Para mantenerse siempre actualizados e tiene 2 caminos
 <div align="right">
   <small><a href="#index">🡡 volver al inicio</a></small>
 </div>
+
+### Git Ignore
+
+Es una buena práctica no subir archivos binarios a un repositorio remoto
+
+Para lograrlo simplemente tenemos que crear un archivo .gitignore en la raiz de nuestro proyecto y escribir ahi todos los archivos que deseamos ignorar
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### Readme
+
+Otra muy buena práctica es crear un archivo README.md en la razi de tu proyecto en la cual puedes describir y explicar de forma clara y precisa de lo que trata tu proyecto o incluso una documentación en la cual puedes indicar como usar tu proyecto
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+### GitHub Pages
+
+Es tan facil como
+
+* ir a los settings de nuestro proyecto
+* dirigirnos a la sección de github pages
+* indicar que rama usara
+* y listo tu proyecto ya esta online
+
+Pero si quieres que este sea la raiz de tu cuenta el proyecto tiene que llaramrse <PROFILE_NAME>.github.io
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+## Multiples entornos de trabajo
+
+### Git Rebase
+
+Significa que agarramos un rama externa completa y la pegamos a nuestra rama maestra, esto es una muy mala práctica eviandolas a repositorios remotos esto solo lo deberias hacer internamente (en local)
