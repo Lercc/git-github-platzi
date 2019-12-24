@@ -767,3 +767,24 @@ Es un estado intermedio antes de hacer un merge, esto nos permite que nosotros y
 <div align="right">
   <small><a href="#index">🡡 volver al inicio</a></small>
 </div>
+
+### Fork
+
+Esta caracteristica no es de Git si no exclusiva de GitHub
+
+Se usa cuando nos gusta mucho un proyecto del cual no somos parte
+
+Nos permite hacer una copia del estado actua del proyecto y clonarlo como un proyecto mio
+
+Esto solo se puede hacer con proyecto públicos
+
+las ventajas de hacer un fork es que nos permite hacer un pull request con el proyecto original
+
+Para mantenerse siempre actualizados e tiene 2 caminos
+
+* Haciendo merge desde github
+* Añadir un segundo remote hacia el proyecto original llamado upstream (recomendado) para hacer los pulls que matendran actualizado nuestro fork
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
