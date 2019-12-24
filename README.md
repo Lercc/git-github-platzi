@@ -7,13 +7,13 @@
 
 ## Index
 
-- [Introducción](#introducción)
+- [1. Introducción](#introducción)
   - [¿Qué es Git?](#qué-es-git)
   - [¿Porqué usar Git?](#porqué-usar-git)
   - [Instalar Git en Windows](#instalar-git-en-windows)
   - [Archivos binarios y de texto plano](#archivos-binarios-y-de-texto-plano)
   - [Terminal y linea de comandos](#terminal-y-linea-de-comandos)
-- [Comandos básicos de git](#comandos-básicos-de-git)
+- [2. Comandos básicos de git](#comandos-básicos-de-git)
   - [Notas](#notas)
   - [git init](#git-init)
   - [git add](#git-add)
@@ -29,18 +29,20 @@
   - [git diff](#git-diff)
   - [git reset](#git-reset)
   - [git rm](#git-rm)
-- [Flujo de trabajo básico](#Flujo-de-trabajo-básico)
+- [3. Flujo de trabajo básico](#flujo-de-trabajo-básico)
   - [git clone](#git-clone)
   - [git push](#git-push)
   - [git fetch](#git-fetch)
   - [git merge](#git-merge)
   - [git pull](#git-pull)
-- [Trabajando con repositorios remotos](#Trabajando-con-repositorios-remotos)
+- [4. Trabajando con repositorios remotos](#trabajando-con-repositorios-remotos)
   - [git remote](#git-remote)
   - [SSH](#SSH)
   - [alias](#alias)
   - [git tag](#git-tag)
   - [gitk](#gitk)
+- [5. Flujo de trababo profesionales](#flujo-de-trababo-profesionales)
+  - [Pull Request](#pull-request)
 
 ## Introducción
 
@@ -308,7 +310,7 @@ Cada commit enviado al repositorio es una nueva versión de cambios de tu proyec
 
 Al usarlo se nos abrira una pantalla rara que es un editor de codigo dentreo del mundo de git llamado vim
 
-#### git commit -m "MENSAJE"
+#### git commit -m "MESSAGE"
 
 Para poder agregarle un mensaje a tu commit (es lo más recomendable)
 
@@ -316,7 +318,7 @@ Para poder agregarle un mensaje a tu commit (es lo más recomendable)
 
 esto atuomaticamente hace el git add de los cambios __Solo funciona con archivos que ya estabam el staging previamente__ si creo un archivo nuevo esto no va a funcionar.
 
-#### git commit -am "MENSAJE"
+#### git commit -am "MESSAGE"
 
 juntamos los 2 comandos anteriores
 
@@ -336,11 +338,11 @@ vamos a poder ver los cambios especificos de los archivos en cada cmommit
 
 Te muestra todo el historial de tus commits
 
-#### git log --all -graph
+##### git log --all -graph
 
 Te muestra todo el historial de tus commits con un gráfico
 
-#### git log --all -graph --decorate --oneline
+###### git log --all -graph --decorate --oneline
 
 Te muestra todo el historial de tus commits con un gráfico y comprimido
 
@@ -382,11 +384,11 @@ Te ptermite crear y moverte a la rama nueva.
 
 Te muestra las ramas existentes
 
-#### git branch <NAME>
+#### git branch <BRANCH_NAME>
 
 Te permite crear una rama
 
-#### git branch -d <NAME>
+#### git branch -d <BRANCH_NAME>
 
 Te perimte eliminar una rama, pero solo si esta no contiene trabajos sin fucionar
 
@@ -396,7 +398,7 @@ Si se esta trabajando con un repositorio remoto entonces se tiene que hacer un p
 git push -u origin :<BRANCH_NAME>
 ```
 
-#### git branch -D <NAME>
+#### git branch -D <BRANCH_NAME>
 
 te permite forzar la eliminacion de la rama
 
@@ -492,15 +494,15 @@ Podras ver donde estan guardadas las configuraciones de windows
 
 Para cambiar la configuración global de git
 
-##### git config --global user.name "<NAME>"
+##### git config --global user.name "NAME"
 
 Para cambiar el usuario de la configuración global
 
-##### git config --global user.email "<EMAIL>"
+##### git config --global user.email "EMAIL"
 
 Para cambiar el email de la configuración global
 
-#### git config --global ailas.<ALIAS> "<COMAND WITHOUT GIT>"
+#### git config --global ailas.ALIAS "COMAND WITHOUT GIT (commit)"
 
 crear alias para un comando de git
 
@@ -702,7 +704,7 @@ Nos permite cambiar la url remota
 
 ### SSH
 
-#### ssh-keygen -t rsa -b 4096 -C "<MESSAGE>"
+#### ssh-keygen -t rsa -b 4096 -C "COMMENTS"
 
 Generar llave publica y privada
 
@@ -722,7 +724,7 @@ Informar al sistema la ubicación de nuestra llave privada
 
 te muestra los alias creados
 
-#### alias <ALIAS_NAME>=<"COMAND">
+#### alias <ALIAS_NAME>="COMAND"
 
 crear un alias para un comando
 
@@ -734,7 +736,7 @@ crear un alias para un comando
 
 Te muestra los tags
 
-#### git tag -a <TAG_NAME> -m "<MESSAGE>" <COMMIT_ID>
+#### git tag -a <TAG_NAME> -m "MESSAGE" <COMMIT_ID>
 
 Agregar un tag
 
@@ -749,6 +751,18 @@ Eliminarar un tag
 ### gitk
 
 nos abre un gestor visual de las historias de git
+
+<div align="right">
+  <small><a href="#index">🡡 volver al inicio</a></small>
+</div>
+
+## Flujo de trababo profesionales
+
+### Pull Request
+
+Esta caracteristica no es de Git si no exclusiva de GitHub
+
+Es un estado intermedio antes de hacer un merge, esto nos permite que nosotros y otros miembros del equipo puedan revisar los cambios o mejores del código y que este sea correcto y así ellos puedan aprobarlo antes de combinar las 2 ramas
 
 <div align="right">
   <small><a href="#index">🡡 volver al inicio</a></small>
