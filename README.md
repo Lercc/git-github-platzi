@@ -210,7 +210,7 @@ Ahora te pregunta si quieres usar su emluador de linux (MinTTY) o la consola por
 </div>
 
 <div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
+  <small><a href="#index">🡡 volver al inicio</a></small>
 </div>
 
 ### Archivos binarios y de texto plano
