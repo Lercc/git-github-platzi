@@ -66,48 +66,49 @@
 
 ### ¿Qué es Git?
 
-Es un control de versiones que guarda los cambios realziados en los archivos de tu proyecto.
+#### Es un control de versiones que guarda los cambios realziados en los archivos de tu proyecto.
 
 <div align="center">
   <img src="./md/git-1.jpg" alt="img">
 </div>
 
-Ademas manejas los cambios que otras personas hagan sobre los mismos archivos, así multiples personas pueden trabajar en un mismo proyecto sin pisarse.
+#### Ademas manejas los cambios que otras personas hagan sobre los mismos archivos, así multiples personas pueden trabajar en un mismo proyecto sin pisarse.
 
 <div align="center">
   <img src="./md/git-2.jpg" alt="img">
 </div>
 
-Si existe algun error se peude saber quien hizo ese cambio.
+#### Si existe algun error se peude saber quien hizo ese cambio.
 
 <div align="center">
   <img src="./md/git-3.jpg" alt="img">
 </div>
 
-si hay algo de una versión antigua que quieres recuperar  lo puedes hacer de manera precisa.
+#### Si hay algo de una versión antigua que quieres recuperar  lo puedes hacer de manera precisa.
 
 <div align="center">
   <img src="./md/git-4.jpg" alt="img">
 </div>
 
-En tu maquina local usas git funciona en la terminal o linea de comandos.
+#### En tu maquina local usas git funciona en la terminal o linea de comandos.
 
 <div align="center">
   <img src="./md/git-5.jpg" alt="img">
 </div>
 
-Y tiene distintos comandos.
+#### Y tiene distintos comandos.
 
 <div align="center">
   <img src="./md/git-6.jpg" alt="img">
 </div>
 
 #### Si quieres
+
 * Colaborar con otros
 * Usar una interfaz web
 * Publicar tus proyectos en la web
 
-Usas GitHub
+#### Usas GitHub
 
 <div align="center">
   <img src="./md/git-7.jpg" alt="img">
