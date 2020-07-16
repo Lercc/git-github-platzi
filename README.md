@@ -719,6 +719,10 @@ La forma de hacerlo es la siguiente:
 - La persona a la que enviamos el mensaje cifrado puede usar su llave privada para descifrar el mensaje y ver los archivos.
 - Puedes compartir tu llave pública pero nunca tu llave privada.
 
+<div align="center">
+  <img src="./md/git-22.jpg" alt="img">
+</div>
+
 ### git remote 
 
 Nos muestra los remotes existentes
